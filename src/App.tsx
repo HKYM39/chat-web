@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 
 import { useState } from "react";
 import { ApolloProvider, gql, useMutation } from "@apollo/client";
@@ -26,7 +26,7 @@ function ChatBox() {
 
   const send = async () => {
     if (!input.trim()) return;
-    const next = [...messages, { role: "user", content: input }];
+    const next: Msg[] = [...messages, { role: "user", content: input }];
     setMessages(next);
     setInput("");
 
